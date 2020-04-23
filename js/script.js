@@ -12,7 +12,7 @@ function start() {
 
 }
 
-start();
+// start();
 
 
 
@@ -64,9 +64,19 @@ let appData = {
     
         }
     
-    }
+    },
+    chooseIncome(){
+        let items = prompt('Введіть можливі додаткові заробітки через кому.', '');
+        appData.income = items.split(', ');
+        appData.income.push(prompt('Ще щось?', ""));
+        appData.income.sort();
+            }
 
 };
+
+
+let box1 = document.querySelectorAll('div.box'),
+    box2 = document.getElementsByClassName('box');
 
 
 
